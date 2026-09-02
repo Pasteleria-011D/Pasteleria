@@ -1,0 +1,77 @@
+/* PAGINA PRINCIPAL EL HEADER Y FOOTER */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    background-color: #FFF5E1;
+    color:#5D4037;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: #d3b39ed2;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(139, 69, 19, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.title h2 {
+    font-size: 20px;
+    text-align: left;
+}
+
+.nav{
+    font-family: 'Pacifico', cursive;
+    color: #8B4513;
+    font-size: 18px;
+}
+
+.nav a,
+.auth a,
+.footer a {
+    color: #75003b;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.nav a:hover {
+    color:#8b4513;
+}
+
+.cart {
+    background-color: #e99bd8;
+    color: #0a0a0a;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+}
+.cart img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.footer {
+    background-color: #5D4037;
+    color: #FFF5E1;
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+    margin-top: auto;
+}
+
+/* INICIO DE SESION */
+
