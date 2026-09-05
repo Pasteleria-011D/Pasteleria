@@ -9,10 +9,11 @@ botonesCarrito.forEach(function(boton){
         const precioTexto = tarjeta.querySelector(".precio").textContent;
 
         const precio = parseInt(precioTexto.replace("$","").replace(".",""));
-
+        const imagen = tarjeta.querySelector("img").getAttribute("src");
         const producto = {
             nombre : nombre,
-            precio : precio
+            precio : precio,
+            imagen : imagen
         };
 
         carrito.push(producto);
