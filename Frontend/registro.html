@@ -24,10 +24,95 @@
             <div class="cart">
                 <a href="carrito.html"><img src="img/carrito.png">Carrito</a>
              </div>
+         </header>
             <!-- REGISTRO DE NUEVO USUARIO-->
+             <main class="register-container">
+                <section class="register-card">
+                <div class="register-header">
+                    <h1>Crear cuenta nueva</h1>
+                    <p>
+                        Registrate para disfrutar de todos los beneficios de Pasteleria Mil Sabadores
+                    </p>
+                </div>
+                    <form id="registerform">
+                        <div class=form>
+                            <label for="rut">Rut *</label>
+                            <input type="text" id="rut" name="rut" placeholder="Ingrese un rut valido">
+                        </div>
+                        <br>
+                        <div class="form">
+                            <label for="nombre completo">Nombre Completo *</label>
+                            <input type="text" id="nombre" name="Nombre Completo" placeholder="Ingrese su nombre completo">
+                        </div>
+                        <br>
+                        <div class="form">
+                            <label for="apellido">Apellidos *</label>
+                            <input type="text" id="apellidos" name="apellidos" placeholder="Ingrese sus apelidos">
+                        </div>
+                        <br>
+                        <div class="form">
+                            <label for="fecha de nacimiento">Fecha de Nacimiento *</label>
+                            <input type="date" id="fecha de nacimiento" name="fecha de nacimiento">
+                        </div>
+                        <br>
+                        <div class="form">
+                            <label for="region">Region *</label>
+                            <select id="region" name="region">
+                                <option value="">
+                                    Selecciona una Region
+                                </option>
+                                <option value="Metropolitana">Metropolitana</option>
+                                <option value="Valparaiso">Valparaiso</option>
+                                <option value="Ohiggins">Ohiggins</option>
+                                <option value="Maule">Maule</option>
+                                <option value="BioBio">BioBio</option>
+                                <option value="La Araucania">La Araucania</option>
+                            </select>
+                            <small id="errorRegion" class="error"></small>
+                        </div>
+                        <br>
+                        <div class="form">
+                            <label for="comuna">Comuna *</label>
+                            <select iid="comuna" name="comuna">
+                                <option value="">
+                                    Selecciona primero una region
+                                </option>
+                            </select>
+                            <small id="errorComuna" class="error"></small>
+                        </div>
+                        <br>
+                        <div class="form">
+                            <label for="correo">Correo Electronico *</label>
+                            <input type="email" id="correo" name="correo" placeholder="Ingrese su correo electronico">
+                        </div>
+                        <br>
+                        <div class="form">
+                            <label for="correo">Correo Electronico *</label>
+                            <input type="email" id="correo" name="correo" placeholder="confirme su correo electronico">
+                        </div>
+                        <br>
+                        <div class="form">
+                            <label for="contraseña">Contraseña *</label>
+                            <input type="password" id="contraseña" name="Contraseña" placeholder="Ingrese una contraseña">
+                        </div>
+                        <br>
+                        <div class="form">
+                            <label for="contraseña">Confirmar Contraseña *</label>
+                            <input type="password" id="contraseña" name="Contraseña" placeholder="confirme su contraseña">
+                        </div>
+                        <br>
+                        <div class="form">
+                            <label for="telefono">Telefono (opcional)</label>
+                            <input type="text" id="telefono" name="Telefono" placeholder="Ingrese su numero de telefono">
+                        </div>
 
-
-
-
+                        <br>
+                        <button type="submit">Registrarse</button>
+                    </form>
+                </section>
+             </main>
+        <footer class="footer">
+            <p>@ 2026 Pateleria Mil Sabadores - 50 Aniversario. Todos los derechos reservados</p>
+        </footer>
     </body>
 </html>
