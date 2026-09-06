@@ -130,8 +130,9 @@ function validarCorreo(){
         mostrarError("errorCorreo","El correo electronico es obligatorio");
         return false;
     }
-    if(!valor.endsWidth("@duocuc.cl") && !valor.endsWidth("@profesor.duoc.cl") && !valor.endsWidth("@gmail.com")){
+    if(!valor.endsWith("@duocuc.cl") && !valor.endsWith("@profesor.duoc.cl") && !valor.endsWith("@gmail.com")){
         mostrarError("errorCorreo", "Solo se permiten correos @duocuc.cl, @profesor.duoc.cl y @gmail.com")
+        return false;
     }
     limpiarerror("errorCorreo");
     return true;
@@ -311,7 +312,7 @@ formulario.addEventListener("submit", function (evento){
     const confirmarContraseñaValida = validarConfirmarContraseña();
     const telefonoValido = validarTelefono();
     const codigoValido = validarCodigo();
-
+    
     console.log("RUT:", rutValido);
     console.log("Nombre:", nombreValido);
     console.log("Apellidos:", apellidosValidos);
@@ -330,9 +331,6 @@ formulario.addEventListener("submit", function (evento){
         localStorage.setItem("contraseñaUsuario", contraseña.value);
         localStorage.setItem("edadUsuario", edad);
         
-        if(codigoPromocinal.value.trim() === "FELICES50"){
-            localStorage.setItem("descuentoFELICES50", "10");
-        }
         if(edad >= 50){
             alert("¡Registro Exitoso! Bienvenido a Pasteleria Mil Sabores. Tienes un 50% de descuento por ser mayor de 50 años.");
         }else if(codigoPromocinal.value.trim() === "FELICES50"){
