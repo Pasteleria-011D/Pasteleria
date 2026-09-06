@@ -130,7 +130,7 @@ function validarCorreo(){
         mostrarError("errorCorreo","El correo electronico es obligatorio");
         return false;
     }
-    if(!valor.endsWith("@duocuc.cl") && !valor.endsWith("@profesor.duoc.cl") && !valor.endsWith("@gmail.com")){
+    if(!valor.endsWith("@duoc.cl") && !valor.endsWith("@profesor.duoc.cl") && !valor.endsWith("@gmail.com")){
         mostrarError("errorCorreo", "Solo se permiten correos @duocuc.cl, @profesor.duoc.cl y @gmail.com")
         return false;
     }
