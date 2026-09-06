@@ -34,7 +34,7 @@ function mostrarCarrito(){
         }
         const montoDescuento = totalCarrito * descuento / 100;
         const totalFinal = totalCarrito - montoDescuento;
-        total.textContent = totalCarrito.toLocaleString("es-CL");
+        total.textContent = totalFinal.toLocaleString("es-CL");
     });
     total.textContent = totalCarrito.toLocaleString("es-CL");
 }
