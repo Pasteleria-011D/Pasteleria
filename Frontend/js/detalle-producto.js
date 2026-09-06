@@ -1,0 +1,1 @@
+const codigoProducto = localStorage.getItem("productoSeleccionado");
