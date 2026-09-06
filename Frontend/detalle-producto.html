@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pasteleria Mil Sabores - Inicio</title>
-        <link rel="stylesheet" href="css/style-carrito.css">
+        <title>Pasteleria Mil Sabores - Detalle de Producto</title>
+        <link rel="stylesheet" href="css/style-detalle-producto.css">
     </head>
     <body>
         <header class="header">
@@ -26,10 +26,18 @@
                 <a href="carrito.html"><img src="img/carrito.png">Carrito</a>
              </div>
         </header>
-        <main class="detalle-producto">
-            <section id="detalleProducto" class="detalle-producto">
-                
+        <main class="detalle-container">
+            <section id="detalleProducto" class="detalle-producto"></section>
+                <section class="relacionados">
+                    <h2>Productos relacionados</h2>
+                    <div id="productosRelacionados" class="productos-relacionados">
+                    </div>
             </section>
         </main>
+        <footer class="footer">
+            <p>@ 2026 Pasteleria Mil Sabores - 50 Aniversario. Todos los derechos reservados</p>
+        </footer>
+        <script src="js/productos.js"></script>
+        <script src="js/detalle-producto.js"></script>
     </body>
 </html>
