@@ -20,4 +20,18 @@ botonesCarrito.forEach(function(boton){
         localStorage.setItem("carrito",JSON.stringify(carrito));
         alert("Producto agregado al carrito")
     });
+});
+
+const productos = document.querySelectorAll(".prodctos-card");
+
+productos.forEach(function(producto){
+    producto.addEventListener("click",function(evento){
+        if(evento.target.classList.contains("btn-carrito")){
+            return;
+        }
+
+        const codigo = producto.getAttribute("data-id");
+        localStorage.setItem("productosSeleccionado",codigo);
+        window.location.href = "detalle-producto.html";
+    })
 })
