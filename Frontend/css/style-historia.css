@@ -74,19 +74,19 @@ body {
 }
 
 .History {
+    width:90%;
     max-width: 1000px;
     margin: 40px auto;
     padding: 20px;
-    font-family: 'Lato', sans-serif;
-    color:#5D4037
+    color:#5d4037;
 }
 
 .History h1 {
     font-family: 'Pacifico', cursive;
-    color: #8B4513;
-    font-size: 25px;
+    color: #6f4e37;
+    font-size: 34px;
     text-align: center;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .History p {
@@ -96,8 +96,7 @@ body {
 }
 
 .div-history {
-    background-color: #f8c8c8;
-    border: 1px solid #662c35;
+    background-color: white;
     border-radius: 15px;
     padding: 30px;
     margin-bottom: 30px;
@@ -113,13 +112,13 @@ body {
 
 .div-history h2 {
     font-family: 'Pacifico', cursive;
-    color: #8B4513;
-    font-size: 30px;
+    color: #6f4e37;
+    font-size: 27px;
     margin-bottom: 15px;
 }
 
 .div-history p {
-    line-height: 1.2;
+    line-height: 1.5;
     font-size: 15px;
     text-align: center;
 }
@@ -127,13 +126,14 @@ body {
 .div-history img {
     width: 280px;
     height: 300px;
+    object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .div-hito {
-    background-color: #caac97;
-    color: #6d4100c2;
+    background-color: #ead8c8;
+    color: #5D4037;
     border-radius: 15px;
     padding: 35px 30px;
     margin-bottom: 30px;
@@ -146,7 +146,7 @@ body {
 
 .div-hito h2 {
     font-family: 'Pacifico', cursive;
-    color: #FFC0CB;
+    color: #6f4e37;
     font-size: 30px;
 }
 
@@ -157,12 +157,11 @@ body {
 }
 
 .div-hito strong {
-    color: #aa233a;
+    color: #8b4513;
 }
 
 .div-mision {
-    background-color: #f79d9d;
-    border: 1px solid #d1203d;
+    background-color: white;
     border-radius: 15px;
     padding: 35px 30px;
     margin-bottom: 40px;
@@ -174,7 +173,7 @@ body {
 
 .div-mision h2 {
     font-family: 'Pacifico', cursive;
-    color: #522505;
+    color: #6f4e37;
     font-size: 25px;
     text-align: center;
     margin-bottom: 25px;
@@ -186,9 +185,9 @@ body {
 }
 
 h3.mision, h3.vision {
-    color: #8B4513;
+    color: #8b4513;
     font-size: 20;
-    font-weight: 700;
+    font-weight: bold;
     margin-top: 15px;
     margin-bottom: 8px;
 }
@@ -196,8 +195,50 @@ h3.mision, h3.vision {
 p.mision, p.vision {
     line-height: 1.6;
     font-size: 15px;
-    color: #330f09;
+    color: #5D4037;
     margin-bottom: 15px;
 }
 
 
+.div-desarrolladores {
+    background-color: #ead8c8;
+    border-radius: 15px;
+    padding: 35px 30px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.div-desarrolladores h2 {
+    color:#6f4e37;
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.div-desarrolladores p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+.desarrolladores {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.desarrollador {
+    background-color: white;
+    padding:20px;
+    border-radius: 10px;
+    width: 220px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.desarrollador h3 {
+    color:#6f4e37;
+    margin-bottom: 8px;
+}
+
+.desarrollador p {
+    color:#5d4037;
+}
