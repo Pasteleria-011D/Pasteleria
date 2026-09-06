@@ -31,7 +31,7 @@ productos.forEach(function(producto){
         }
 
         const codigo = producto.getAttribute("data-id");
-        localStorage.setItem("productosSeleccionado",codigo);
+        localStorage.setItem("productoSeleccionado",codigo);
         window.location.href = "detalle-producto.html";
     })
 })
