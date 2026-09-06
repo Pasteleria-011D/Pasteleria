@@ -12,6 +12,7 @@ const correo = document.getElementById("correo");
 const contraseña = document.getElementById("contraseña");
 const confirmarContraseña = document.getElementById("confirmarContraseña");
 const telefono = document.getElementById("telefono");
+const codigoPromocinal =  document.getElementById("codigoPromocional");
 
 
 function mostrarError(idError, mensaje){
@@ -35,8 +36,10 @@ function validarRut(rut) {
     if (rut.length < 9) {
         return false;
     }   
-    if(!rut.includes("-"))
+    if(!rut.includes("-")){
     limpiarerror("errorRut");
+    return false;
+    }
     return true;
 }
 
@@ -65,6 +68,7 @@ function validarApellidos(){
 function validarfechaNacimiento(){
     const fecha = fechaNacimiento.value;
 
+    console.log("Fecha dentro de validar:", fecha);
     if(fecha === ""){
         mostrarError("errorFechaNacimiento", "La fecha de nacimiento es obligatoria");
         return false;
@@ -80,6 +84,26 @@ function validarfechaNacimiento(){
     limpiarerror("errorFechaNacimiento");
     return true;
 }
+
+function calcularEdad(fecha){   
+    if(fecha === ""){
+        return 0;
+    }
+
+    const partes = fecha.split("-");
+    const año = parseInt(partes[0]);
+    const mes = parseInt(partes[1]);
+    const dia = parseInt(partes[2]);
+
+    const hoy = new Date();
+    let edad = hoy.getFullYear() - año;
+
+    if(hoy.getMonth() + 1 < mes || (hoy.getMonth() + 1 === mes && hoy.getDate() < dia)){
+        edad--;
+    }
+    return edad;
+}
+
 
 function validarRegion(){
     if(region.value === ""){
@@ -106,6 +130,9 @@ function validarCorreo(){
         mostrarError("errorCorreo","El correo electronico es obligatorio");
         return false;
     }
+    if(!valor.endsWidth("@duocuc.cl") && !valor.endsWidth("@profesor.duoc.cl") && !valor.endsWidth("@gmail.com")){
+        mostrarError("errorCorreo", "Solo se permiten correos @duocuc.cl, @profesor.duoc.cl y @gmail.com")
+    }
     limpiarerror("errorCorreo");
     return true;
 }
@@ -117,16 +144,8 @@ function validarContraseña(){
         mostrarError("errorContraseña","La contraseña es obligatoria");
         return false;
     }
-    if (valor.length < 8){
-        mostrarError("errorContraseña","La contraseña debe tener al menos 8 caracteres");
-        return false;
-    }
-    if(!/[A-Z]/.test(valor)){
-        mostrarError("errorContraseña", "La contraseña debe al menos contener una Mayuscula");
-        return false;
-    }
-    if(!/[0-9]/.test(valor)){
-        mostrarError("errorContraseña","La contraseña debe contener al menos un numero");
+    if (valor.length < 4 || valor.length > 10){
+        mostrarError("errorContraseña","La contraseña debe tener contener al menos 4 y 10 caracteres");
         return false;
     }
     limpiarerror("errorContraseña");
@@ -158,10 +177,26 @@ function validarTelefono(){
 
 }
 
+function validarCodigo(){
+    const codigo = codigoPromocinal.value.trim();
+
+    if(codigo === ""){
+        limpiarerror("errorCodigo");
+        return true;
+    }
+    if(codigo !== "FELICES50"){
+        mostrarError("errorCodigo","El codigo promocional no es valido");
+        return false;
+    }
+    limpiarerror("errorCodigo");
+    return true;
+
+}
+
 rut.addEventListener("input", function (){
     if(rut.value.trim() === ""){
         mostrarError("errorRut", "El RUT es obligatorio");
-    } else if(validarRut(rut.value)){
+    } else if(!validarRut(rut.value)){
         mostrarError("errorRut", "Ingresa un RUT valido, ejemplo 12.345.678-9")
     }else{
         limpiarerror("errorRut");
@@ -178,6 +213,7 @@ correo.addEventListener("input",validarCorreo);
 contraseña.addEventListener("input",validarContraseña);
 confirmarContraseña.addEventListener("input",validarConfirmarContraseña);
 telefono.addEventListener("input",validarTelefono);
+codigoPromocinal.addEventListener("input",validarCodigo);
 
 const comunasporRegion = {
     Metropolitana: [
@@ -265,12 +301,16 @@ formulario.addEventListener("submit", function (evento){
     const nombreValido = validarNombre();
     const apellidosValidos = validarApellidos();
     const fechaValida = validarfechaNacimiento();
+    const edad = calcularEdad(fechaNacimiento.value);
+    console.log("FECHA:", fechaNacimiento.value);
+    console.log("EDAD:", edad);
     const regionValida = validarRegion();
     const comunaValida = validarComuna();
     const correoValido = validarCorreo();
     const contraseñaValida = validarContraseña();
     const confirmarContraseñaValida = validarConfirmarContraseña();
     const telefonoValido = validarTelefono();
+    const codigoValido = validarCodigo();
 
     console.log("RUT:", rutValido);
     console.log("Nombre:", nombreValido);
@@ -285,14 +325,21 @@ formulario.addEventListener("submit", function (evento){
 
     if (rutValido && nombreValido && apellidosValidos && fechaValida && regionValida
         && comunaValida && correoValido && contraseñaValida && confirmarContraseñaValida
-        && telefonoValido ){
-            localStorage.setItem("correoUsuario",correo.value);
-            localStorage.setItem("contraseñaUsuario",contraseña.value);
-            alert("¡Registro Exitoso! Bienvenido a Pasteleria Mil Sabores");
-
-    } else {
-
-        alert("Por Favor, corrije los errores del formulario");
-
-    }
+        && telefonoValido && codigoValido){
+        localStorage.setItem("correoUsuario", correo.value);
+        localStorage.setItem("contraseñaUsuario", contraseña.value);
+        localStorage.setItem("edadUsuario", edad);
+        
+        if(codigoPromocinal.value.trim() === "FELICES50"){
+            localStorage.setItem("descuentoFELICES50", "10");
+        }
+        if(edad >= 50){
+            alert("¡Registro Exitoso! Bienvenido a Pasteleria Mil Sabores. Tienes un 50% de descuento por ser mayor de 50 años.");
+        }else if(codigoPromocinal.value.trim() === "FELICES50"){
+            alert("¡Registro Exitoso! Bienvenido a Pasteleria Mil Sabores. Tienes un 10% de descuento de por vida por usar el codigo FELICES50.");
+        }else {
+            alert("¡Registro Exitoso! Bienvenido a Pasteleria Mil Sabores.");
+        }} else {
+        alert("Por favor, corrige los errores del formulario");
+        }
 })
