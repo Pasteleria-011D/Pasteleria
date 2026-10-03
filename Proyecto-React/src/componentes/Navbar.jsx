@@ -1,17 +1,23 @@
-function Navbar(){
-    return (
-        <nav>
-            <h2>Pasteleria Mil Sabores</h2>
+import {NavLink} from 'react-router-dom';
 
-            <ul>
-                <li>Inicio</li>
-                <li>Catalogo</li>
-                <li>Blogs</li>
-                <li>Nuestra Historia</li>
-                <li>Inicia sesion</li>
-                <li>Registrate</li>
-                <li>Contacto</li>
-            </ul>
+function Navbar(){
+    return(
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <div className="container">
+
+                <NavLink className="navbar-brand" to="/">Pastelería Mil Sabores</NavLink>
+
+                <div className="navbar-nav">
+                    <NavLink className="nav-link" to="/Index">Inicio</NavLink>
+                    <NavLink className="nav-link" to="/Catalogo">Catalogo</NavLink>
+                    <NavLink className="nav-link" to="/Blog">Blogs</NavLink>
+                    <NavLink className="nav-link" to="/NuestraHistoria">Historia</NavLink>
+                    <NavLink className="nav-link" to="/Login">Inicio Sesion</NavLink>
+                    <NavLink className="nav-link" to="/Registro">Registrate</NavLink>
+                    <NavLink className="nav-link" to="/Contacto">Contactanos</NavLink>
+                    <NavLink className="nav-link" to="/Carrito">Carrito</NavLink>
+                </div>
+            </div>
         </nav>
     );
 }
