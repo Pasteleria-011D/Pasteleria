@@ -13,14 +13,16 @@ function App(){
   return(
     <BrowserRouter>
       <Navbar />
-      <Route path="/index" element={<Index />} />
-      <Route path="/catalogo" element={<Catalogo />} />
-      <Route path="/blog" element={<Blogs />} />
-      <Route path="/nuestraHistoria" element={<Historia />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/registro" element={<Registro />} />
-      <Route path="/contacto" element={<Contacto />} />
-      <Route path="/carrito" element={<Carrito />} />
+        <Routes>
+          <Route path="/index" element={<Index />} />
+          <Route path="/catalogo" element={<Catalogo />} />
+          <Route path="/blog" element={<Blogs />} />
+          <Route path="/nuestraHistoria" element={<Historia />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/registro" element={<Registro />} />
+          <Route path="/contacto" element={<Contacto />} />
+          <Route path="/carrito" element={<Carrito />} />
+        </Routes>
     </BrowserRouter>
   );
 }
