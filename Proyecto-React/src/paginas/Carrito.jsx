@@ -15,6 +15,9 @@ function Carrito({carrito}){
                 </div>
             ))
         )}
+        <p className="cp-bold mt-4">
+            Total = ${carrito.reduce((total, producto) => total + producto.precio, 0)}
+        </p>
         </div>
     );
 }
