@@ -10,7 +10,13 @@ function Login(){
                 <div className="col-6">
                     <h1 className="text-center mb-4">Iniciar Sesion</h1>
 
-                    <form onSubmit={(e) => {e.preventDefault(); setMensaje("Inicio de sesion realizado correctamente")}}>
+                    <form onSubmit={(e) => {e.preventDefault(); 
+                        if (correo === "" || password === "") {
+                            setMensaje("Debes completar todos los campos");
+                            return;
+                        }
+                        setMensaje("Inicio de sesion realizado correctamente");
+                    }}>
                         <div className="mb-3">
                             <label className="form-label">
                                 Correo Electronico
