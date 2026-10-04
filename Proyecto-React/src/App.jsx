@@ -1,5 +1,6 @@
 import {BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./componentes/Navbar";
+import Footer from "./componentes/Footer";
 import Index from "./paginas/Index";
 import Catalogo from "./paginas/Catalogo";
 import Blogs from "./paginas/Blogs";
@@ -9,6 +10,7 @@ import Registro from "./paginas/Registro";
 import Contacto from "./paginas/Contacto";
 import Carrito from "./paginas/Carrito";
 import { useState } from "react";
+
 
 function App(){
   const [carrito, setCarrito] = useState([]);
@@ -25,6 +27,7 @@ function App(){
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/carrito" element={<Carrito carrito={carrito} setCarrito={setCarrito}/>} />
         </Routes>
+        <Footer />
     </BrowserRouter>
   );
 }
