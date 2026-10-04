@@ -1,7 +1,7 @@
 import ProductoCard from "../componentes/ProductoCard";
 
 
-function Catalogo(){
+function Catalogo({setCarrito}){
     return(
         <div className="container mt-4">
             <h1>Catalogo</h1>
@@ -10,6 +10,7 @@ function Catalogo(){
                         nombre="Torta Cuadrada de Chocolate"
                         precio={0}
                         imagen="/img/torta-cuadrada-chocolate.jpg"
+                        setCarrito={setCarrito}
                     />
                 </div>
                 <div className="col-md-4 mb-4">
@@ -17,6 +18,7 @@ function Catalogo(){
                         nombre="Brownie Sin Gluten"
                         precio={0}
                         imagen="/img/brownie.webp"
+                        setCarrito={setCarrito}
                     />
                 </div>
                 <div className="col-md-4 mb-4">
@@ -24,6 +26,7 @@ function Catalogo(){
                         nombre="Torta Cuadrada de Frutas"
                         precio={0}
                         imagen="/img/torta-cuadrada-frutas.jpg"
+                        setCarrito={setCarrito}
                     />
                 </div>
                 <div className="col-md-4 mb-4">
@@ -31,6 +34,7 @@ function Catalogo(){
                         nombre="Torta Circular de Vainilla"
                         precio={0}
                         imagen="/img/torta-vainilla.jpg"
+                        setCarrito={setCarrito}
                     />
                 </div>
                 <div className="col-md-4 mb-4">
@@ -38,6 +42,7 @@ function Catalogo(){
                         nombre="Torta Cicular de Manjar"
                         precio={0}
                         imagen="/img/torta-manjar.png"
+                        setCarrito={setCarrito}
                     />
                 </div>
                 <div className="col-md-4 mb-4">
@@ -45,6 +50,7 @@ function Catalogo(){
                         nombre="Mousse de Chocolate"
                         precio={0}
                         imagen="/img/mouse.jpg"
+                        setCarrito={setCarrito}
                     />
                 </div>
                 <div className="col-md-4 mb-4">
@@ -52,6 +58,7 @@ function Catalogo(){
                         nombre="Tiramusi Clasico"
                         precio={0}
                         imagen="/img/tiramisu.jpg"
+                        setCarrito={setCarrito}
                     />
                 </div>
                 <div className="col-md-4 mb-4">
@@ -59,6 +66,7 @@ function Catalogo(){
                         nombre="Torta Sin Azucar de Naranja"
                         precio={0}
                         imagen="/img/torta-naranja.jpg"
+                        setCarrito={setCarrito}
                     />
                 </div>
                 <div className="col-md-4 mb-4">
@@ -66,6 +74,7 @@ function Catalogo(){
                         nombre="Cheesecake Sin Azucar"
                         precio={0}
                         imagen="/img/cheescake.webp"
+                        setCarrito={setCarrito}
                     />
                 </div>
                 <div className="col-md-4 mb-4">
@@ -73,6 +82,7 @@ function Catalogo(){
                         nombre="Empanada de Manzana"
                         precio={0}
                         imagen="/img/manzna.jpg"
+                        setCarrito={setCarrito}
                     />
                 </div>
                 <div className="col-md-4 mb-4">
@@ -80,6 +90,7 @@ function Catalogo(){
                         nombre="Tarta de Santiago"
                         precio={0}
                         imagen="/img/tarta-de-santiago.jpg"
+                        setCarrito={setCarrito}
                     />
                 </div>
                 <div className="col-md-4 mb-4">
@@ -87,6 +98,7 @@ function Catalogo(){
                         nombre="Pan Sin Gluten"
                         precio={0}
                         imagen="/img/pan-sin-gluten.jpg"
+                        setCarrito={setCarrito}
                     />
                 </div>
                 <div className="col-md-4 mb-4">
@@ -94,6 +106,7 @@ function Catalogo(){
                         nombre="Torta Vegana de Chocolate"
                         precio={0}
                         imagen="/img/torta-vegana-chocolate.jpg"
+                        setCarrito={setCarrito}
                     />
                 </div>
                 <div className="col-md-4 mb-4">
@@ -101,6 +114,7 @@ function Catalogo(){
                         nombre="Galletas Veganas de Avena"
                         precio={0}
                         imagen="/img/galletas-de-avena-3.webp"
+                        setCarrito={setCarrito}
                     />
                 </div>
                 <div className="col-md-4 mb-4">
@@ -108,6 +122,7 @@ function Catalogo(){
                         nombre="Torta Especial de Cumpleaños"
                         precio={0}
                         imagen="/img/torta-especial-cumpleaños.jpg"
+                        setCarrito={setCarrito}
                     />
                 </div>
                 <div className="col-md-4 mb-4">
@@ -115,6 +130,7 @@ function Catalogo(){
                         nombre="Torta Especial de Boda"
                         precio={0}
                         imagen="/img/torta-boda.jpg"
+                        setCarrito={setCarrito}
                     />
                 </div>
         </div>
