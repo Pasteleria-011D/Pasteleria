@@ -1,6 +1,6 @@
 import {NavLink} from 'react-router-dom';
 
-function Navbar(){
+function Navbar({carrito}){
     return(
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container">
@@ -15,7 +15,7 @@ function Navbar(){
                     <NavLink className="nav-link" to="/Login">Inicio Sesion</NavLink>
                     <NavLink className="nav-link" to="/Registro">Registrate</NavLink>
                     <NavLink className="nav-link" to="/Contacto">Contactanos</NavLink>
-                    <NavLink className="nav-link" to="/Carrito">Carrito</NavLink>
+                    <NavLink className="nav-link" to="/Carrito">Carrito ({carrito.length})</NavLink>
                 </div>
             </div>
         </nav>

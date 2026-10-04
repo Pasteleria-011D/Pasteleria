@@ -14,7 +14,7 @@ function App(){
   const [carrito, setCarrito] = useState([]);
   return(
     <BrowserRouter>
-      <Navbar />
+      <Navbar carrito={carrito}/>
         <Routes>
           <Route path="/index" element={<Index />} />
           <Route path="/catalogo" element={<Catalogo carrito={carrito} setCarrito={setCarrito}/>}/>
@@ -23,7 +23,7 @@ function App(){
           <Route path="/login" element={<Login />} />
           <Route path="/registro" element={<Registro />} />
           <Route path="/contacto" element={<Contacto />} />
-          <Route path="/carrito" element={<Carrito carrito={carrito}/>} />
+          <Route path="/carrito" element={<Carrito carrito={carrito} setCarrito={setCarrito}/>} />
         </Routes>
     </BrowserRouter>
   );
