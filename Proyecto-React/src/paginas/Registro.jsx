@@ -1,6 +1,7 @@
 import { useState } from "react";
-
+import AppAlert from "../componentes/AppAlert";
 function Registro(){
+    const [mostrarAlerta, setMostrarAlerta] = useState(false);
     const [rut, setRut] = useState("");
     const [nombre, setNombre] = useState("");
     const [apellidos, setApellidos] = useState("");
@@ -12,6 +13,15 @@ function Registro(){
     const [confirmarPassword, setConfirmarPassword] = useState("");
     const [telefono, setTelefono] = useState("");
     const [codigoPromocional, setCodigoPromocional] = useState("");
+    const [errorRut, setErrorRut] = useState(false);
+
+    const validarFormulario = () => {
+        if (rut.trim() === ""){
+            setErrorRut(true);
+            return;
+        }
+        setErrorRut(false);
+    };
     return(
         <div className="container mt-4">
             <h1>Registro</h1>
@@ -26,6 +36,16 @@ function Registro(){
                     value={nombre} onChange={(e) => setNombre(e.target.value)}/>
             </div>
                     
+            <AppAlert
+                mostrar={errorRut}
+                cerrar={() => setErrorRut(false)}
+                variant="danger"
+                msg="debe ingresar su rut"/>
+
+            <button type="button" onClick={validarFormulario}>
+                    Registrarse
+            </button>
+        
         
         </div>
     );
