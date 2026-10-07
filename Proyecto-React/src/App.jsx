@@ -10,6 +10,7 @@ import Registro from "./paginas/Registro";
 import Contacto from "./paginas/Contacto";
 import Carrito from "./paginas/Carrito";
 import { useState } from "react";
+import DetalleProducto from "./paginas/DetalleProducto";
 
 
 function App(){
@@ -26,6 +27,7 @@ function App(){
           <Route path="/registro" element={<Registro />} />
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/carrito" element={<Carrito carrito={carrito} setCarrito={setCarrito}/>} />
+          <Route path="/detalleProducto" element={<DetalleProducto/>}/>
         </Routes>
         <Footer />
     </BrowserRouter>

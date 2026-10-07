@@ -67,6 +67,7 @@ function Index(setCarrito){
                     {Productos.map((Producto) => (
                         <ProductoCard
                             key={Producto.id}
+                            id={Producto.id}
                             nombre={Producto.nombre}
                             precio={Producto.precio}
                             imagen={Producto.imagen}

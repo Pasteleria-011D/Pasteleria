@@ -1,10 +1,14 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
-function ProductoCard({nombre, precio, imagen, setCarrito}){
+function ProductoCard({id, nombre, precio, imagen, setCarrito}){
     const [agregado, setAgregado] = useState(false);
     return(
         <div className="card">
-            <img src={imagen} className="card-img" alt={nombre}/>
+            <Link to={`/detalleProducto/${id}`}>
+                <img src={imagen} className="card-img" alt={nombre}/>
+            </Link>
+
             <div className="card-body">
                 <h5 className="card-title">{nombre}</h5>
                 <p className="card-text">${precio}</p>
