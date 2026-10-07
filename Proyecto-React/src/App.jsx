@@ -1,7 +1,7 @@
 import {BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./componentes/Navbar";
 import Footer from "./componentes/Footer";
-import Index from "./paginas/Index";
+import Inicio from "./paginas/Index";
 import Catalogo from "./paginas/Catalogo";
 import Blogs from "./paginas/Blogs";
 import Historia from "./paginas/NuestraHistoria";
@@ -18,7 +18,7 @@ function App(){
     <BrowserRouter>
       <Navbar carrito={carrito}/>
         <Routes>
-          <Route path="/index" element={<Index />} />
+          <Route path="/index" element={<Inicio setCarrito={setCarrito} />} />
           <Route path="/catalogo" element={<Catalogo carrito={carrito} setCarrito={setCarrito}/>}/>
           <Route path="/blog" element={<Blogs />} />
           <Route path="/nuestraHistoria" element={<Historia />} />

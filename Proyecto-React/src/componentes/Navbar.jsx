@@ -5,10 +5,10 @@ function Navbar({carrito}){
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container">
 
-                <NavLink className="navbar-brand" to="/">Pastelería Mil Sabores</NavLink>
+                <NavLink className="navbar-brand" to="/index">Pastelería Mil Sabores</NavLink>
 
                 <div className="navbar-nav">
-                    <NavLink className="nav-link" to="/Index">Inicio</NavLink>
+                    <NavLink className="nav-link" to="/index">Inicio</NavLink>
                     <NavLink className="nav-link" to="/Catalogo">Catalogo</NavLink>
                     <NavLink className="nav-link" to="/Blog">Blogs</NavLink>
                     <NavLink className="nav-link" to="/NuestraHistoria">Historia</NavLink>
