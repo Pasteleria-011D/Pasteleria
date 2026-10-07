@@ -118,7 +118,7 @@ function Registro(){
 
                     <div className="mb-3">
                         <label className="form-label">Fecha de Nacimiento</label>
-                        <input type="text" className="form-control" placeholder="00/00/0000"
+                        <input type="date" className="form-control" placeholder="00/00/0000"
                         value={fechaNacimiento} onChange={(e) => setFechaNacimiento(e.target.value)}/>
                     </div>
 
@@ -143,25 +143,25 @@ function Registro(){
 
                     <div className="mb-3">
                         <label className="form-label">Correo</label>
-                        <input type="text" className="form-control" 
+                        <input type="email" className="form-control" 
                         value={correo} onChange={(e) => setCorreo(e.target.value)}/>
                     </div>
 
                     <div className="mb-3">
                         <label className="form-label">Contraseña</label>
-                        <input type="text" className="form-control" placeholder="************"
+                        <input type="password" className="form-control" placeholder="************"
                         value={password} onChange={(e) => setPassword(e.target.value)}/>
                     </div>
 
                     <div className="mb-3">
                         <label className="form-label">Confirmar Contraseña</label>
-                        <input type="text" className="form-control" 
+                        <input type="password" className="form-control" 
                         value={confirmarPassword} onChange={(e) => setConfirmarPassword(e.target.value)}/>
                     </div>
 
                     <div className="mb-3">
                         <label className="form-label">Telefono</label>
-                        <input type="text" className="form-control" 
+                        <input type="tel" className="form-control" 
                         value={telefono} onChange={(e) => setTelefono(e.target.value)}/>
                     </div>
                     
