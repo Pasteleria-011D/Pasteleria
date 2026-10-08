@@ -91,6 +91,8 @@ function Catalogo({setCarrito}){
                     {productos.map((producto, index) => (
                     <div className="col-mb-4" key={index}>
                         <ProductoCard
+                            key={producto.id}
+                            id={producto.id}
                             nombre={producto.nombre}
                             precio={producto.precio}
                             imagen={producto.imagen}

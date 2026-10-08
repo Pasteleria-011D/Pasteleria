@@ -9,13 +9,13 @@ function Navbar({carrito}){
 
                 <div className="navbar-nav">
                     <NavLink className="nav-link" to="/index">Inicio</NavLink>
-                    <NavLink className="nav-link" to="/Catalogo">Catalogo</NavLink>
-                    <NavLink className="nav-link" to="/Blog">Blogs</NavLink>
-                    <NavLink className="nav-link" to="/NuestraHistoria">Historia</NavLink>
-                    <NavLink className="nav-link" to="/Login">Inicio Sesion</NavLink>
-                    <NavLink className="nav-link" to="/Registro">Registrate</NavLink>
-                    <NavLink className="nav-link" to="/Contacto">Contactanos</NavLink>
-                    <NavLink className="nav-link" to="/Carrito">Carrito ({carrito.length})</NavLink>
+                    <NavLink className="nav-link" to="/catalogo">Catalogo</NavLink>
+                    <NavLink className="nav-link" to="/blog">Blogs</NavLink>
+                    <NavLink className="nav-link" to="/nuestraHistoria">Historia</NavLink>
+                    <NavLink className="nav-link" to="/login">Inicio Sesion</NavLink>
+                    <NavLink className="nav-link" to="/registro">Registrate</NavLink>
+                    <NavLink className="nav-link" to="/contacto">Contactanos</NavLink>
+                    <NavLink className="nav-link" to="/carrito">Carrito ({carrito.length})</NavLink>
                 </div>
             </div>
         </nav>
