@@ -11,11 +11,11 @@ function ProductoCard({id, nombre, precio, imagen, setCarrito}){
 
             <div className="card-body">
                 <h5 className="card-title">{nombre}</h5>
-                <p className="card-text">${precio}</p>
+                <p className="card-text">${Number(precio).toLocaleString("es-CL")}</p>
 
                 <button className="btn btn-primary"
                 onClick={() => {
-                    setCarrito((carritoActual) => [...carritoActual, {nombre, precio, imagen}]);
+                    setCarrito((carritoActual) => [...carritoActual, {id, nombre, precio, imagen}]);
                     setAgregado(true);
                 }}>
                     Agregar al Carrito

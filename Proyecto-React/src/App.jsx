@@ -27,7 +27,7 @@ function App(){
           <Route path="/registro" element={<Registro />} />
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/carrito" element={<Carrito carrito={carrito} setCarrito={setCarrito}/>} />
-          <Route path="/detalleProducto/:id" element={<DetalleProducto/>}/>
+          <Route path="/detalleProducto/:id" element={<DetalleProducto setCarrito={setCarrito}/>}/>
         </Routes>
         <Footer />
     </BrowserRouter>
