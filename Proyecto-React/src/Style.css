@@ -77,30 +77,54 @@ a {
     color: #5D4037;
 }
 
-.nav {
-    font-family: 'Pacifico', cursive;
-    color: #8B4513;
-    font-size: 18px;
+
+/* NAVBAR DE REACT: adaptado a Navbar.jsx */
+
+.navbar.navbar-expand-lg.navbar-light.bg-light {
+    background-color: #d3b39ed2 !important;
+    padding: 15px 5%;
+    box-shadow: 0 4px 12px rgba(139, 69, 19, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .container {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.navbar .navbar-brand {
+    color: #5D4037;
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.navbar .navbar-nav {
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     gap: 8px;
 }
 
-.nav a,
-.auth a,
-.footer a {
+.navbar .navbar-nav .nav-link {
     color: #75003b;
+    font-family: 'Pacifico', cursive;
+    font-size: 18px;
     text-decoration: none;
     margin: 0 5px;
 }
 
-.nav a:hover,
-.auth a:hover,
-.footer a:hover {
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
     color: #8b4513;
 }
+
 
 .cart {
     background-color: #e99bd8;

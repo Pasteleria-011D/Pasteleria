@@ -1,6 +1,6 @@
 import ProductoCard from "../componentes/ProductoCard";
 
-function Index(setCarrito){
+function Index({setCarrito}){
     const Productos = [
         {
             id: "PG001",
