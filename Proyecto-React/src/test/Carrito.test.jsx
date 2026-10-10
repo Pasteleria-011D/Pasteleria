@@ -1,6 +1,6 @@
 import {render, screen} from '@testing-library/react';
 import {describe, it, expect} from 'vitest';
-import Carrito from './Carrito';
+import Carrito from '../paginas/Carrito';
 import userEvent from '@testing-library/user-event';
 import { useState } from 'react';
 

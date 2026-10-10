@@ -1,6 +1,6 @@
 import {render, screen} from '@testing-library/react';
 import {describe, it ,expect} from 'vitest';
-import Registro from './Registro';
+import Registro from '../paginas/Registro';
 import userEvent from '@testing-library/user-event';
 
 describe('Registro', () => {
