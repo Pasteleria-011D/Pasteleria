@@ -12,4 +12,13 @@ describe ('Catalogo', () =>{
         );
         expect(screen.getByRole('heading', {name: 'Catalogo'})).toBeInTheDocument();
     });
+    it('muestra un producto del catalogo', () => {
+        render(
+            <MemoryRouter>
+                <Catalogo setCarrito={() => []} />
+            </MemoryRouter>
+        );
+
+        expect(screen.getByRole('heading', {name: 'Torta Cuadrada de Chocolate'})).toBeInTheDocument();
+    });
 });
