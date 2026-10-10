@@ -17,12 +17,26 @@ function Registro(){
     const [mensaje, setMensaje] = useState("");
     const [mostrarAlerta, setMostrarAlerta] = useState(false);
     const [tipoAlerta, setTipoAlerta] = useState("danger");
+    const validarRut = (rut) => {
+        rut = rut.trim();
+        if (rut === "") {
+            return false;
+        }
+        if (!rut.includes("-")) {
+            return false;
+        }
+        const partes = rut.split("-");
+        if (partes.length !== 2) {
+            return false;
+        }
+        return true;
+    };
 
     const validarFormulario = (e) => {
         e.preventDefault();
 
         if (rut.trim() === ""){
-            setMensaje("Debe ingresar su RUT");
+            setMensaje("Ingrese un RUT valido, por ejemplo 11.111.111-1");
             setTipoAlerta("danger");
             setMostrarAlerta(true);
             return;
@@ -106,13 +120,13 @@ function Registro(){
 
                     <div className="mb-3">
                         <label className="form-label">Nombre</label>
-                        <input type="text" className="form-control" 
+                        <input type="text" className="form-control"  placeholder="Ingrese su nombre"
                         value={nombre} onChange={(e) => setNombre(e.target.value)}/>
                     </div>
 
                     <div className="mb-3">
                         <label className="form-label">Apellidos</label>
-                        <input type="text" className="form-control" 
+                        <input type="text" className="form-control" placeholder="Ingrese sus apellidos"
                         value={apellidos} onChange={(e) => setApellidos(e.target.value)}/>
                     </div>
 
@@ -143,7 +157,7 @@ function Registro(){
 
                     <div className="mb-3">
                         <label className="form-label">Correo</label>
-                        <input type="email" className="form-control" 
+                        <input type="email" className="form-control" placeholder="Ingrese su correo"
                         value={correo} onChange={(e) => setCorreo(e.target.value)}/>
                     </div>
 
@@ -167,11 +181,11 @@ function Registro(){
                     
                     <div className="mb-3">
                         <label className="form-label">Codigo promocional</label>
-                        <input type="text" className="form-control" 
+                        <input type="text" className="form-control" placeholder="Ingrese su codigo promocional"
                         value={codigoPromocional} onChange={(e) => setCodigoPromocional(e.target.value)}/>
                     </div>
 
-                    <button type="submit" className="btn btn-primary" onClick={validarFormulario}>
+                    <button type="submit" className="btn btn-primary" >
                         Registrarse
                     </button>
                 </form>
