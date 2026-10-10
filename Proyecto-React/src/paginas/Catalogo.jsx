@@ -121,7 +121,7 @@ function Catalogo({setCarrito}){
             <h1>Catalogo</h1>
                 <div className="row">
                     {productos.map((producto, index) => (
-                    <div className="col-mb-4" key={producto.id}>
+                    <div className="col-12 col-sm-6 col-md-4 mb-4" key={producto.id}>
                         <ProductoCard
                             key={producto.id}
                             id={producto.id}

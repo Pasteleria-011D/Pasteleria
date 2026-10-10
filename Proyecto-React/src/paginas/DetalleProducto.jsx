@@ -6,64 +6,120 @@ function DetalleProducto({setCarrito}){
     const {id} = useParams();
     const [cantidad, setCantidad] = useState(1);
 
-    const productos = [
-    {
-        id: "PG001",
-        nombre: "Brownie sin Gluten",
-        precio: "4000",
-        imagen: "/img/brownie.webp",
-        descripcion: "Delicioso brownie de chocolate sin gluten, con una textura suave y un intenso sabor a cacao."
-    },
-    {
-        id: "PT002",
-        nombre: "Tarta de Santiago",
-        precio: "6000",
-        imagen: "/img/tarta-de-santiago.jpg",
-        descripcion: "Tradicional tarta de almendras de origen español, con un delicado sabor dulce y una textura suave."
-    },
-    {
-        id: "PI002",
-        nombre: "Tiramisu",
-        precio: "5500",
-        imagen: "/img/tiramisu.jpg",
-        descripcion: "Clásico postre italiano preparado con café, crema de mascarpone y cacao, perfecto para los amantes del café."
-    },
-    {
-        id: "TC001",
-        nombre: "Torta Cuadrada de Chocolate",
-        precio: "45000",
-        imagen: "/img/torta-cuadrada-chocolate.jpg",
-        descripcion: "Exquisita torta de chocolate con un sabor intenso y una textura suave, ideal para celebraciones especiales."
-    },
-    {
-        id: "TC002",
-        nombre: "Torta Cuadrada de Frutas",
-        precio: "50000",
-        imagen: "/img/torta-cuadrada-frutas.jpg",
-        descripcion: "Deliciosa torta cubierta con una selección de frutas frescas, perfecta para disfrutar en ocasiones especiales."
-    },
-    {
-        id: "TT002",
-        nombre: "Torta Manjar",
-        precio: "42000",
-        imagen: "/img/torta-manjar.png",
-        descripcion: "Suave y deliciosa torta rellena con nuestro tradicional manjar, ideal para compartir en familia."
-    },
-    {
-        id: "PV002",
-        nombre: "Galletas de Avena",
-        precio: "4500",
-        imagen: "/img/galletas-de-avena-3.webp",
-        descripcion: "Crujientes y deliciosas galletas de avena, perfectas para acompañar un café o disfrutar como snack."
-    },
-    {
-        id: "PI001",
-        nombre: "Mousse de Chocolate",
-        precio: "5000",
-        imagen: "/img/mouse.jpg",
-        descripcion: "Suave y cremoso mousse de chocolate con un intenso sabor a cacao, ideal para los amantes del chocolate."
-    }
-];
+    const productos =[
+        {
+            id: "TC001",
+            nombre: "Torta Cuadrada de Chocolate",
+            precio: 45000,
+            imagen: "/img/torta-cuadrada-chocolate.jpg",
+            descripcion: "Deliciosa torta cuadrada de chocolate con una suave cobertura y decoración especial."
+        },
+        {
+            id: "TC002",
+            nombre: "Torta Cuadrada de Frutas",
+            precio: 50000,
+            imagen: "/img/torta-cuadrada-frutas.jpg",
+            descripcion: "Deliciosa torta cuadrada de frutas con un diseño original y sabor espectacular."
+        },
+        {
+            id: "TT001",
+            nombre: "Torta Circular de Vainilla",
+            precio: 40000,
+            imagen: "/img/torta-vainilla.jpg",
+            descripcion: "Suave torta circular de vainilla preparada con una receta tradicional."
+        },
+        {
+            id: "TT002",
+            nombre: "Torta Circular de Manjar",
+            precio: 42000,
+            imagen: "/img/torta-manjar.png",
+            descripcion: "Deliciosa torta de bizcocho, relleno de manjar y con una decoración especial."
+        },
+        {
+            id: "PI001",
+            nombre: "Mousse de Chocolate",
+            precio: 5000,
+            imagen: "/img/mouse.jpg",
+            descripcion: "Exquisito mousse de chocolate con una textura suave y cremosa."
+        },
+        {
+            id: "PI002",
+            nombre: "Tiramisu Clasico",
+            precio: 5500,
+            imagen: "/img/tiramisu.jpg",
+            descripcion: "Delicioso tiramisu preparado con su sabor tradicional."
+        },
+        {
+            id: "PSA001",
+            nombre: "Torta Sin Azucar de Naranja",
+            precio: 48000,
+            imagen: "/img/torta-naranja.jpg",
+            descripcion: "Deliciosa torta de naranja sin azúcar con un fresco y agradable sabor."
+        },
+        {
+            id: "PSA002",
+            nombre: "Cheesecake Sin Azucar",
+            precio: 47000,
+            imagen: "/img/cheescake.webp",
+            descripcion: "Cremoso cheesecake sin azúcar con una textura suave y deliciosa."
+        },
+        {
+            id: "PT001",
+            nombre: "Empanada de Manzana",
+            precio: 3000,
+            imagen: "/img/manzna.jpg",
+            descripcion: "Tradicional empanada dulce rellena de manzana."
+        },
+        {
+            id: "PT002",
+            nombre: "Tarta de Santiago",
+            precio: 6000,
+            imagen: "/img/tarta-de-santiago.jpg",
+            descripcion: "Deliciosa tarta tradicional con un exquisito sabor a almendras."
+        },
+        {
+            id: "PG001",
+            nombre: "Brownie Sin Gluten",
+            precio: 4000,
+            imagen: "/img/brownie.webp",
+            descripcion: "Delicioso brownie de chocolate preparado sin gluten."
+        },
+        {
+            id: "PG002",
+            nombre: "Pan sin Gluten",
+            precio: 3500,
+            imagen: "/img/pan-sin-gluten.jpg",
+            descripcion: "Pan preparado sin gluten, ideal para acompañar tus comidas."
+        },
+        {
+            id: "PV001",
+            nombre: "Torta Vegana de Chocolate",
+            precio: 50000,
+            imagen: "/img/torta-vegana-chocolate.jpg",
+            descripcion: "Deliciosa torta vegana de chocolate preparada con ingredientes de origen vegetal."
+        },
+        {
+            id: "PV002",
+            nombre: "Galletas Veganas de Avena",
+            precio: 4500,
+            imagen: "/img/galletas-de-avena-3.webp",
+            descripcion: "Deliciosas galletas veganas hechas con avena."
+        },
+        {
+            id: "TE001",
+            nombre: "Torta Especial de Cumpleaños",
+            precio: 55000,
+            imagen: "/img/torta-especial-cumpleaños.jpg",
+            descripcion: "Torta especial para celebrar cumpleaños y momentos importantes."
+        },
+        {
+            id: "TE002",
+            nombre: "Torta Especial de Boda",
+            precio: 60000,
+            imagen: "/img/torta-boda.jpg",
+            descripcion: "Elegante torta especialmente preparada para celebrar un momento inolvidable."
+        }
+    ];
 
     const producto = productos.find(
         (producto) => producto.id === id
@@ -116,13 +172,15 @@ function DetalleProducto({setCarrito}){
 
                 <div className="row">
                     {productosRelacionados.slice(0, 4).map((producto) => (
-                        <ProductoCard
-                            key={producto.id}
-                            id={producto.id}
-                            nombre={producto.nombre}
-                            precio={producto.precio}
-                            imagen={producto.imagen} 
-                            setCarrito={setCarrito}/>
+                        <div className="col-12 col-sm-6 col-md-3 mb-4" key={producto.id}>
+                            <ProductoCard
+                                id={producto.id}
+                                nombre={producto.nombre}
+                                precio={producto.precio}
+                                imagen={producto.imagen}
+                                setCarrito={setCarrito}
+                            />
+                        </div>
                     ))}
                 </div>
             </section>
