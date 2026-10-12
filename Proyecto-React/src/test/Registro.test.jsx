@@ -13,7 +13,7 @@ describe('Registro', () => {
         render(<Registro/>);
 
         await user.click(screen.getByRole('button', {name: 'Registrarse'}));
-        expect(screen.getByText('Debe ingresar su RUT')).toBeInTheDocument();
+        expect(screen.getByText('Ingrese un RUT valido, por ejemplo 11.111.111-1')).toBeInTheDocument();
     });
     it('muestra un error cuando falta el nombre', async () => {
         const user = userEvent.setup();
